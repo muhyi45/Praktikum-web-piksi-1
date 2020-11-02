@@ -9,6 +9,11 @@
       crossorigin="anonymous"
     />
     <title>Dashboard Covid 19 Indonesia</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn.pixabay.com/photo/2020/03/31/03/05/virus-4986063_960_720.png"
+      type="image/x-icon"
+    />
   </head>
   <body class="fade-in container">
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -63,7 +68,36 @@
         <h1>Dashboard Statistik <br />Kasus COVID-19 Indonesia</h1>
         <small>Update Terakhir: Senin, 5 Okt 2020</small>
       </header>
-      <h3>Statistik</h3>
+      <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Pengumuman!</h4>
+        <p>
+          Level kewaspadaan Jabar kini mengikuti zonasi dari Pemerintah Pusat.
+          Lihat peta risiko di sini!
+        </p>
+        <hr />
+        <p class="mb-0">
+          <b><a href="">Check Disini!</a></b>
+        </p>
+      </div>
+
+      <div class="row justify-content-center mt-3">
+        <div class="col-xl-3 text-center">
+          <div class="card p-3 bg-info text-white">
+            <h3 class="card-title">Call Center</h3>
+            <p class="card-text">(022) 119</p>
+          </div>
+        </div>
+        <div class="col-xl-3 text-center">
+          <div class="card p-3 bg-dark text-white">
+            <h3 class="card-title">Hotline Covid</h3>
+            <p class="card-text">
+              <a href="" class="text-white">Chat Disini</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="my-3">Statistik</h3>
       <div
         class="mt-3 row row-cols-1 row-cols-md-2 container justify-content-center text-center"
       >
@@ -101,7 +135,7 @@
         </div>
       </div>
     </div>
-    <h3 class="">
+    <h3 class="my-3">
       Menghitung Presentase Keterisian <br />Ranjang di Rumah Sakit Ketika
       Covid-19
     </h3>
@@ -144,6 +178,50 @@
         <div class="card text-center p-3 mt-3">
           <h3>Kondisi</h3>
           <p class="card-text" id="output-k"></p>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="my-3">Rumah Sakit Penanganan Covid-19</h3>
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="card bg-white p-3">
+          <p class="card-text">
+            Berikut ini adalah rumah sakit yang menjadi rujukan untuk pasien
+            dengan status Pasien dalam Pengawasan. Anda harus mengunjungi
+            fasilitas kesehatan terdekat terlebih dahulu seperti klinik/rumah
+            sakit umum sebelum akhirnya dapat dirujuk ke rumah sakit khusus di
+            bawah ini.
+          </p>
+          <div class="row justify-content-center text-white">
+            <div class="col-xl-3">
+              <div class="card bg-primary p-3">
+                <h3 class="card-title">
+                  RSU Dr. Hasan Sadikin
+                </h3>
+                <p class="card-text">Jl. Pasteur No. 38, Kota Bandung</p>
+              </div>
+            </div>
+            <div class="col-xl-3">
+              <div class="card bg-warning p-3">
+                <h3 class="card-title">
+                  RSTP Dr. H. A. Rotinsulu
+
+                </h3>
+                <p class="card-text">Jl. Bukit Jarian No.40, Hegarmanah, Kota Bandung
+
+                </p>
+              </div>
+            </div>
+            <div class="col-xl-3">
+              <div class="card bg-success p-3">
+                <h3 class="card-title">
+                  RSAU Dr. M. Salamun
+                </h3>
+                <p class="card-text">Jl. Ciumbuleuit No.203, Kota Bandung</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
