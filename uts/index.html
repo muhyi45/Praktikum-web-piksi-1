@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <title>Dashboard Covid 19 Indonesia</title>
+  </head>
+  <body class="fade-in container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#"
+        ><img
+          src="https://cdn.pixabay.com/photo/2020/03/31/03/05/virus-4986063_960_720.png"
+          alt="Covid-19"
+          width="40px"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Kasus</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Bantuan Sosial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Donasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Kontak</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="button nav-link" id="button-download-app"
+              >Download App</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Konten utama dashboard -->
+    <div id="konten" class="container justify-content-center">
+      <header class="my-3 text-center">
+        <h1>Dashboard Statistik <br />Kasus COVID-19 Indonesia</h1>
+        <small>Update Terakhir: Senin, 5 Okt 2020</small>
+      </header>
+      <h3>Statistik</h3>
+      <div
+        class="mt-3 row row-cols-1 row-cols-md-2 container justify-content-center text-center"
+      >
+        <div class="col mb-4 fade-in">
+          <div class="card bg-primary text-white">
+            <div class="card-body">
+              <h4 class="card-title">Total Terkomfirmasi</h4>
+              <p class="card-text">xxx Orang</p>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card bg-warning text-white">
+            <div class="card-body">
+              <h4 class="card-title">Dalam Perawatan</h4>
+              <p class="card-text">xxx Orang</p>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card bg-success text-white">
+            <div class="card-body">
+              <h4 class="card-title">Selesai Perawatan</h4>
+              <p class="card-text">xxx Orang</p>
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card bg-danger text-white">
+            <div class="card-body">
+              <h4 class="card-title">Meninggal</h4>
+              <p class="card-text">xxx Orang</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3 class="">
+      Menghitung Presentase Keterisian <br />Ranjang di Rumah Sakit Ketika
+      Covid-19
+    </h3>
+    <div class="row">
+      <div class="col-xl-8">
+        <div class="card p-3">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1"
+                >Jumlah total ranjang di rumah sakit</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="input-j"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1"
+                >Jumlah total ranjang di rumah sakit yang terisi</label
+              >
+              <input type="text" class="form-control" id="input-t" />
+            </div>
+            <input
+              type="butotn"
+              class="btn btn-primary"
+              id="input-button"
+              onclick="prosesPerhitungan()"
+              value="Kalkulasi!"
+            />
+          </form>
+        </div>
+      </div>
+      <div class="col-xl-4">
+        <div class="card text-center p-3">
+          <h3>Persentase ketersediaan</h3>
+          <p class="card-text" id="output-ptj"></p>
+        </div>
+        <div class="card text-center p-3 mt-3">
+          <h3>Kondisi</h3>
+          <p class="card-text" id="output-k"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bagian footer dari dashboard -->
+    <footer class="text-center footer mt-5" id="footer">
+      <p>Tim Pengelola Dashboard COVID-19 Indonesia</p>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      //proses perhitungan
+      function prosesPerhitungan() {
+        // menampilkan string di console
+        console.log("Fungsi prosesPerhitungan() dipanggil");
+
+        // penginputan nilai j
+        var j = document.getElementById("input-j").value;
+
+        // penginputan nilai t
+        var t = document.getElementById("input-t").value;
+
+        // Buat formula untuk menghitung persentase keterisian ranjang (ptj) !
+        // Persentase keterisian ranjang = ranjang yang terisi dibagi dengan total ranjang
+        var ptj = t / j;
+
+        // menampilkan text melalui output-ptj
+        document.getElementById("output-ptj").textContent = ptj + " %";
+
+        /*
+    Buat formula untuk menampilkan kondisi keterisian ranjang (k)
+    Jika dibawah 30%, kondisi = AMAN
+    Jika 30% - 70%, kondisi = WASPADA
+    Jika diatas 70%, kondisi = DARURAT
+  */
+        var k = " ";
+        if (ptj <= 0.3) {
+          k = "AMAN";
+        } else if (ptj <= 0.7) {
+          k = "WASPADA";
+        } else if (ptj > 0.7) {
+          k = "DARURAT";
+        }
+        // Tampilkan ketersediaan ranjang
+        document.getElementById("output-k").textContent = k;
+      }
+    </script>
+  </body>
+</html>
